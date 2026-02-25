@@ -1,0 +1,7 @@
+--num_envs 1024
+
+--engine_config data/engines/isaac_gym_engine.yaml
+--env_config data/envs/add_h1-2_env.yaml
+--agent_config data/agents/add_h1-2_agent.yaml
+
+--out_dir output/

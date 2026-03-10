@@ -77,6 +77,8 @@ def create_output_dir(out_dir):
     return
 
 def copy_file_to_dir(in_path, out_filename, output_dir):
+    if (output_dir != ""):
+        os.makedirs(output_dir, exist_ok=True)
     out_file = os.path.join(output_dir, out_filename)
     shutil.copy(in_path, out_file)
     return

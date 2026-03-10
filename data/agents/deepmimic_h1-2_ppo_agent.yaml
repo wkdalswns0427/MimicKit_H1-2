@@ -13,13 +13,13 @@ optimizer:
     learning_rate: 5e-5
 
 discount: 0.99
-steps_per_iter: 32
+steps_per_iter: 64
 iters_per_output: 100
 test_episodes: 32
-normalizer_samples: 100000000
+normalizer_samples: 1000000
 
 update_epochs: 5
-batch_size: 4
+batch_size: 32
 td_lambda: 0.95
 ppo_clip_ratio: 0.2
 norm_adv_clip: 4.0

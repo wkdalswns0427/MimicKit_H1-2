@@ -63,6 +63,10 @@ To train a model, run the following command:
 ```
 python mimickit/run.py --mode train --num_envs 4096 --engine_config data/engines/isaac_gym_engine.yaml --env_config data/envs/deepmimic_humanoid_env.yaml --agent_config data/agents/deepmimic_humanoid_ppo_agent.yaml --visualize true --out_dir output/
 ```
+H1-2 (Isaac Lab) example:
+```
+python3 mimickit/run.py --mode train --num_envs 2048 --engine_config data/engines/isaac_lab_engine.yaml --env_config data/envs/deepmimic_h1-2_env.yaml --agent_config data/agents/deepmimic_h1-2_ppo_agent.yaml --visualize true --out_dir output/h1-2_walk
+```
 - `--mode` selects either `train` or `test` mode.
 - `--num_envs` the number of parallel environments used for simulation. Not all environments support parallel envs, this is mainly used for Isaac Gym envs and other environments, like DeepMind Control Suite does not support this feature and should therefore use 1 for the number of envs.
 - `--engine_config` configuration file for the engine to select between different simulator backends.

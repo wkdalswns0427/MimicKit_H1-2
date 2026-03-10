@@ -1,0 +1,40 @@
+env_name: "deepmimic"
+
+char_file: "data/assets/h1_2_official/h1_2/h1_2.usd"
+camera_mode: "track"
+
+episode_length: 5.0 # seconds
+global_obs: True
+root_height_obs: True
+pose_termination: False
+pose_termination_dist: 2.0 # m
+enable_phase_obs: False
+enable_tar_obs: True
+num_phase_encoding: 4
+tar_obs_steps: [1, 2, 3]
+rand_reset: False
+zero_center_action: True
+log_tracking_error: False
+
+ref_char_offset: [2.0, 0.0, 0.0] # m
+motion_root_offset: [0.0, 0.0, 0.0] # m
+visualize_ref_char: True
+
+enable_early_termination: True
+key_bodies: ["left_ankle_roll_link", "right_ankle_roll_link", "torso_link", "left_wrist_yaw_link", "right_wrist_yaw_link"]
+contact_bodies: ["left_knee_link", "left_ankle_pitch_link", "left_ankle_roll_link", "right_knee_link", "right_ankle_pitch_link", "right_ankle_roll_link"]
+
+# Bootstrap motion for stage-1 standing before walk imitation.
+motion_file: "data/motions/h1-2/h1-2_stand.pkl"
+
+reward_pose_w: 0.55
+reward_vel_w: 0.05
+reward_root_pose_w: 0.2
+reward_root_vel_w: 0.05
+reward_key_pos_w: 0.15
+
+reward_pose_scale: 0.25
+reward_vel_scale: 0.01
+reward_root_pose_scale: 5.0
+reward_root_vel_scale: 1.0
+reward_key_pos_scale: 10.0

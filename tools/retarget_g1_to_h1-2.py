@@ -263,7 +263,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--tgt_char_file",
-        default="data/assets/h1-2/h1-2.xml",
+        default="data/assets/h1_2_official/h1_2.xml",
         help="Target character MJCF file (default: H1-2 XML).",
     )
     parser.add_argument(

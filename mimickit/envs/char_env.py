@@ -12,7 +12,6 @@ import util.camera as camera
 from util.logger import Logger
 import util.torch_util as torch_util
 
-import engines.engine as engine
 
 class CharEnv(sim_env.SimEnv):
     def __init__(self, env_config, engine_config, num_envs, device, visualize, record_video=False):

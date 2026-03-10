@@ -5,3 +5,10 @@ __pycache__/
 output/
 .vscode/
 wandb/
+data/motions/g1/
+data/motions/go2/
+data/motions/humanoid/
+data/assets/g1/
+data/assets/go2/
+data/assets/humanoid/
+data/assets/h1_2_official/
